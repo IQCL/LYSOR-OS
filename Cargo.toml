@@ -1,0 +1,15 @@
+[package]
+name = "lysor-os"
+version = "0.1.0"
+edition = "2021"
+description = "LYSOR OS minimal TCB kernel base (x86_64)"
+
+[profile.release]
+panic = "abort"
+debug = true
+lto = true
+
+[dependencies]
+
+[features]
+default = []
