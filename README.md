@@ -55,6 +55,7 @@ PVH boot（multiboot2 兼容头）
 | 文档 | 内容 |
 |------|------|
 | [ARCHITECTURE.md](docs/ARCHITECTURE.md) | 组件化混合内核分层架构 |
+| [WHITEPAPER.md](docs/WHITEPAPER.md) | 官方白皮书（定位 / 架构思想 / 新旧对比 / 取舍） |
 | [APP_DEV_GUIDE.md](docs/APP_DEV_GUIDE.md) | 应用开发入门（原生应用 / 瞬应用） |
 | [SYSCALL_API.md](docs/SYSCALL_API.md) | 系统调用 ABI 完整参考 |
 | [IPC_API.md](docs/IPC_API.md) | IPC 消息端口与共享内存 |
