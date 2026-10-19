@@ -1,4 +1,4 @@
-# LYSOR OS - Minimal TCB Kernel Base - Test Document
+# LYSOR OS - 内核基座（TCB）测试文档
 
 ## 1. Build prerequisites
 
@@ -40,7 +40,7 @@ The 32-bit stub sets up temporary 2 MiB huge-page tables, enables PAE + long mod
 
 ```
 ===============================================
-  LYSOR OS - minimal TCB kernel base v0.1.0
+  LYSOR OS - kernel base v0.1.0
   build: 0.1.0
 ===============================================
 >> installing GDT...

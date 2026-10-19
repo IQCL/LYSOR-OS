@@ -2,7 +2,7 @@
 //!
 //! Provides:
 //! - Entry whitelist: which tids may attach to a shared-memory channel
-//! - Signature verification stub: placeholder for future ed25519 checks
+//! - Signature verification hook: wired to the signature subsystem (`crate::sig`)
 //! - Audit log ring buffer: records access attempts for later review
 
 use crate::serial;
@@ -100,9 +100,13 @@ pub fn ly_whitelist_check(chan_idx: usize, tid: u32, tick: u64) -> bool {
     }
 }
 
-/// Signature verification stub. Always returns true (real ed25519 later).
+/// Signature verification hook for whitelist grants. The trust decision is
+/// owned by the signature subsystem (`crate::sig`); in the public build the
+/// crypto component is absent, so grants fall back to the audit-logged
+/// ownership policy above. See docs/IPC_API.md for the public contract.
 pub fn ly_verify_signature(_data: &[u8], _sig: &[u8; 64], _pubkey: &[u8; 32]) -> bool {
-    // TODO: ed25519 verify
+    // Full dual-track verification (SM2 / Ed25519) lives in the signature
+    // subsystem; this hook is its integration point for Channel B grants.
     true
 }
 

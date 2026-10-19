@@ -1,4 +1,4 @@
-﻿//! LYSOR OS - minimal TCB kernel base
+//! LYSOR OS - minimal TCB kernel base
 //!
 //! Prefix: `ly_` for all public kernel symbols.
 //! Boot: Multiboot2 -> 32-bit stub -> temporary paging -> x86_64 long mode.
@@ -165,7 +165,7 @@ pub extern "C" fn kernel_main(mb_info: u32) -> ! {
     serial::init_serial();
     serial::serial_writestr(b"\r\n");
     serial::serial_writestr(b"===============================================\r\n");
-    serial::serial_writestr(b"  LYSOR OS - minimal TCB kernel base v0.1.0\r\n");
+    serial::serial_writestr(b"  LYSOR OS - kernel base v0.1.0\r\n");
     serial::serial_writestr(b"  build: ");
     serial::serial_writestr(env!("CARGO_PKG_VERSION").as_bytes());
     serial::serial_writestr(b"\r\n");
