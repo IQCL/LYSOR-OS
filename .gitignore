@@ -1,0 +1,11 @@
+# ---- build artifacts & runtime junk ----
+target/
+logs/
+tools/
+*.log
+*.ppm
+*.img
+*.bin
+
+target/
+
